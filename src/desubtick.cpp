@@ -84,7 +84,7 @@ const char *DesubtickPlugin::GetDate()
 
 const char *DesubtickPlugin::GetLogTag()
 {
-	return "KZ";
+	return "desubtick";
 }
 
 const char *DesubtickPlugin::GetAuthor()

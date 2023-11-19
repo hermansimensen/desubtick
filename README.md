@@ -1,6 +1,6 @@
 # desubtick
  
-Restores legacy (consistent) movement in CS2 by removing subtick information
+Restores legacy (consistent) movement in CS2 by removing subtick information on the server
 
 Requires:
 
