@@ -1,0 +1,5 @@
+build*/
+.vs/
+.vscode/
+hl2sdk-cs2/
+metamod-source/
