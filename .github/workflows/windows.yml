@@ -27,9 +27,6 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip setuptools wheel
           pip install git+https://github.com/alliedmodders/ambuild
-
-      - name: Add msbuild to PATH
-        uses: microsoft/setup-msbuild@v1.1
       
       - name: Checking out MM:Source
         uses: actions/checkout@v3
@@ -52,26 +49,15 @@ jobs:
       - name: Compiling files
         working-directory: build
         run: |
-          python3 ../configure.py --hl2sdk-root "../" --gen=vs --vs-version 17
-          MSBuild cs2desubtick.vcxproj /p:Configuration=Default /p:Platform=x64 /p:Optimization=2
-
-      - name: Make package
-        working-directory: build
-        run: |
-          COPY cs2desubtick.vdf addons/metamod/
-          COPY "cs2desubtick - Default/cs2desubtick.dll" addons/cs2desubtick/bin/win64/
+          python3 ../configure.py --hl2sdk-root "../"
+          ambuild
         
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: desubtick
           path: |
-                build
-                !.vs
-                !"cs2desubtick -Default"
-                !cs2desubtick.vcxproj
+                build/package
                 !.github
                 !.git
                 !.gitattributes
-                !.cache
-                !pdblog.txt
