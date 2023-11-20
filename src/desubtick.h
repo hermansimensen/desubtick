@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef _WIN64
+#define NOMINMAX
+#endif
+
 #include "common.h"
 
 class DesubtickPlugin : public ISmmPlugin, public IMetamodListener
