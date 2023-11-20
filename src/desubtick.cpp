@@ -74,7 +74,7 @@ const char *DesubtickPlugin::GetLicense()
 
 const char *DesubtickPlugin::GetVersion()
 {
-	return "0.0.0.1";
+	return "1.0.0";
 }
 
 const char *DesubtickPlugin::GetDate()
