@@ -11,4 +11,4 @@ and you will also need ambuild2 for compiling.
 
 funchook/utils stuff ripped from cs2kz. 
 
-This has only been confirmed to work on LINUX. 
+Works on Windows and Linux as of 21.11.2023✅ 
