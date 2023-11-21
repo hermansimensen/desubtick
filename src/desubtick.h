@@ -77,6 +77,10 @@ public:
 	void *inputHistory;
 	CBaseUserCmdPB *base;
 	CInButtonStateReal buttonState;
+
+#ifdef _WIN64
+	void* windowsMoment;
+#endif
 };
 
 extern DesubtickPlugin g_DesubtickPlugin;
